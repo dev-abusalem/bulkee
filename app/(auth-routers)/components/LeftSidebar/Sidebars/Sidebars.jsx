@@ -26,8 +26,8 @@ const Sidebars = () => {
           );
         })}
       </div>
-      <hr className="w-full h-[2px] bg-primary opacity-30 " />
-      <div className="mt-2">
+      <hr className="w-full h-[2px] bg-primary opacity-50 " />
+      <div className="mt-4">
         {/* {user === "admin" && (
           <p className="mb-2 text-center text-slate-400 underline">
             Admin panel
