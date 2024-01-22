@@ -8,6 +8,7 @@ import { TableData } from "@/app/data/TableData";
 import NoCart from "@/app/Shared/NoCart";
 import Paginations from "@/app/Shared/Paginations";
 import MarquesModel from "./MarquesModel";
+import { Button } from "@/components/ui/button";
 const MarquesTable = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,6 +18,7 @@ const MarquesTable = () => {
     direction: "ascending",
   });
   const [showModel, setShowModel] = useState(false);
+  const [modelType, setModelType] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
@@ -75,17 +77,25 @@ const MarquesTable = () => {
   };
 
   // show selected item and store
-
   function setSingleData(item) {
     setShowModel(true);
     setSelectedItem(item);
+    setModelType("update");
   }
 
+  // delete button
+  function addMarqueData(item) {
+    setShowModel(true);
+    setModelType("add");
+  }
   return (
     <section>
       <div>
         <div className="flex justify-between items-center">
           <h1 className="font-semibold text-xl">Marques</h1>
+          <Button className="text-white w-[300px]" onClick={addMarqueData}>
+            Add
+          </Button>
           <div className=" relative">
             <Input
               type="email"
@@ -102,7 +112,7 @@ const MarquesTable = () => {
         </div>
 
         {currentData.length === 0 ? (
-          <NoCart />
+          <NoCart onClick={addMarqueData} />
         ) : (
           <div className="mt-5">
             <div className="relative overflow-x-auto border">
@@ -225,6 +235,7 @@ const MarquesTable = () => {
           showModel={showModel}
           setShowModel={setShowModel}
           data={selectedItem}
+          type={modelType}
         />
       </div>
     </section>

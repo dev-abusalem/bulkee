@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
+import MarquesUpdateForm from "./MarquesUpdateForm";
+import MarquesAdd from "./MarquesAdd";
 
-const MarquesModel = ({ showModel, setShowModel, data }) => {
+const MarquesModel = ({ showModel, setShowModel, data, type }) => {
   return (
     <section className=" relative">
       {/* <!-- Main modal --> */}
@@ -10,18 +12,18 @@ const MarquesModel = ({ showModel, setShowModel, data }) => {
           showModel === true ? "" : "hidden"
         } overflow-y-auto overflow-x-hidden bg-[#00000093] fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full`}
       >
-        <div className=" p-4 md:max-w-2xl max-h-full">
+        <div className=" p-4 md:max-w-2xl max-h-full   ">
           {/* <!-- Modal content --> */}
-          <div className="absolute  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow dark:bg-gray-700">
+          <div className="absolute m-10 md:m-0 md:max-w-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow dark:bg-gray-700">
             {/* <!-- Modal header --> */}
             <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                {data?.Nomdelamarque}
+                {type === "update" ? data?.Nomdelamarque : "Add Marque"}
               </h3>
               <button
                 onClick={() => setShowModel(false)}
                 type="button"
-                className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                className="text-gray-900 bg-[#FFBF69] hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 <svg
                   className="w-3 h-3"
@@ -41,23 +43,13 @@ const MarquesModel = ({ showModel, setShowModel, data }) => {
                 <span className="sr-only">Close modal</span>
               </button>
             </div>
-            {/* <!-- Modal body --> */}
-            <div className="p-4 md:p-5 space-y-4">
-              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                With less than a month to go before the European Union enacts
-                new consumer privacy laws for its citizens, companies around the
-                world are updating their terms of service agreements to comply.
-              </p>
-              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                The European Union’s General Data Protection Regulation
-                (G.D.P.R.) goes into effect on May 25 and is meant to ensure a
-                common set of data rights in the European Union. It requires
-                organizations to notify users as soon as possible of high-risk
-                data breaches that could personally affect them.
-              </p>
-            </div>
+
+            {/* <!-- Modal Edit body --> */}
+            {type === "update" ? <MarquesUpdateForm /> : <MarquesAdd />}
             {/* <!-- Modal footer --> */}
-            <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+            {/* <!-- Modal Add Body --> */}
+
+            {/* <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
               <button
                 onClick={() => setShowModel(false)}
                 data-modal-hide="default-modal"
@@ -74,7 +66,7 @@ const MarquesModel = ({ showModel, setShowModel, data }) => {
               >
                 Decline
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

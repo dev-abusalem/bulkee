@@ -27,12 +27,9 @@ const SidebarItem = ({ icon: Icon, label, href }) => {
         )}
       >
         <div className="flex items-center gap-x-2 py-4">
-          <Image
-            src={Icon}
-            alt={label}
-            width={25}
-            height={25}
-            className={cn("text-slate-500", isActive && "text-white")}
+          <Icon
+            size={23}
+            className={cn("text-black", isActive && " text-white")}
           />
           {label}
         </div>
