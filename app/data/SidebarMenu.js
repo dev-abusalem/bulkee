@@ -1,16 +1,30 @@
+import {
+  BarChart4,
+  BookUser,
+  CircleDollarSign,
+  Gift,
+  Layout,
+  Network,
+  RefreshCcwDot,
+  Settings,
+  ShieldCheck,
+  ShoppingBasket,
+  UserRoundCog,
+} from "lucide-react";
+
 export const guestRoutes = [
   {
-    icon: "/images/dash1.svg",
+    icon: Layout,
     label: "Dashboard",
     href: "/dashboard",
   },
   {
-    icon: "/images/plan-du-site 1.svg",
+    icon: Network,
     label: "Marques",
     href: "/dashboard/marques",
   },
   {
-    icon: "/images/admins 1.svg",
+    icon: UserRoundCog,
     label: "Admins",
     href: "/dashboard/ad-mins",
   },
@@ -18,32 +32,32 @@ export const guestRoutes = [
 
 export const adminRoutes = [
   {
-    icon: "/images/dash1.svg",
+    icon: Gift,
     label: "Produits",
     href: "/dashboard/admin/produits",
   },
   {
-    icon: "/images/revendeurs 2.svg",
+    icon: BookUser,
     label: "Revendeurs",
     href: "/dashboard/admin/revendeurs",
   },
   {
-    icon: "/images/commandes 2.svg",
+    icon: ShoppingBasket,
     label: "Commandes",
     href: "/dashboard/admin/commandes",
   },
   {
-    icon: "/images/factures 1.svg",
+    icon: CircleDollarSign,
     label: "Factures",
     href: "/dashboard/admin/factures",
   },
   {
-    icon: "/images/equipe1 1.svg",
+    icon: Settings,
     label: "Équipe",
     href: "/dashboard/admin/equipe",
   },
   {
-    icon: "/images/roles 2.svg",
+    icon: RefreshCcwDot,
     label: "Rôles",
     href: "/dashboard/admin/roles",
   },
