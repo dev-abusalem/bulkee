@@ -9,6 +9,7 @@ import NoCart from "@/app/Shared/NoCart";
 import Paginations from "@/app/Shared/Paginations";
 import MarquesModel from "./MarquesModel";
 import { Button } from "@/components/ui/button";
+import { SquarePen, Trash2 } from "lucide-react";
 const MarquesTable = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -204,16 +205,16 @@ const MarquesTable = () => {
                           </button>
                         </td>
                         <td className="px-6 py-3">
-                          <div className="flex gap-4 items-center">
-                            <button
+                          <div className="flex justify-end gap-4 items-center">
+                            <SquarePen
                               onClick={() => setSingleData(item)}
-                              className="bg-yellow-100 w-full text-yellow-700 py-1 px-2.5 rounded-md"
-                            >
-                              Modifier
-                            </button>
-                            <button className="bg-red-100 w-full text-red-700 py-1 px-2.5 rounded-md">
-                              Supprimer
-                            </button>
+                              size={35}
+                              className="text-yellow-800 shadow hover:shadow-sm cursor-pointer bg-yellow-200 p-2  rounded-sm"
+                            />
+                            <Trash2
+                              size={35}
+                              className="text-red-800 hover:shadow-sm shadow cursor-pointer bg-red-200 p-2 rounded-sm"
+                            />
                           </div>
                         </td>
                       </tr>

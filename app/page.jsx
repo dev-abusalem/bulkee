@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import logo from "../public/icons/logo.svg";
+import { useRouter } from "next/navigation";
 export default function Home() {
   return (
     <main className=" bg-lightbg h-screen overflow-hidden">

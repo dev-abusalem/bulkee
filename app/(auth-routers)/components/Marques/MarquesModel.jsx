@@ -10,7 +10,7 @@ const MarquesModel = ({ showModel, setShowModel, data, type }) => {
       <div
         className={`${
           showModel === true ? "" : "hidden"
-        } overflow-y-auto overflow-x-hidden bg-[#00000093] fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full`}
+        } overflow-y-auto overflow-x-hidden bg-[#040115d6] fixed top-0 right-0 left-0 z-50 justify-center items-center w-full h-full`}
       >
         <div className=" p-4 md:max-w-2xl max-h-full   ">
           {/* <!-- Modal content --> */}
