@@ -6,7 +6,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import noimage from "@/public/images/no-photo.svg";
 
-const ProductsUpdateModel = ({ showModel, setShowModel, data }) => {
+const UpdateRevendeurs = ({ showModel, setShowModel, data }) => {
   const [updateProduct, setUpdateProduct] = useState();
 
   useEffect(() => {
@@ -192,4 +192,4 @@ const ProductsUpdateModel = ({ showModel, setShowModel, data }) => {
   );
 };
 
-export default ProductsUpdateModel;
+export default UpdateRevendeurs;

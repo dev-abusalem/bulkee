@@ -33,7 +33,8 @@ const page = () => {
                 className=" absolute top-1/2 left-3 translate-x-0 text-gray-400 -translate-y-1/2"
               />
               <input
-                type="text"
+                type="email"
+                placeholder="example@compay.com"
                 className="w-full h-[52px] bg-lightbg rounded-md pl-12 outline-none pr-4 font-semibold"
               />
             </div>
@@ -44,7 +45,8 @@ const page = () => {
                 className=" absolute top-1/2 left-3 translate-x-0 text-gray-400 -translate-y-1/2"
               />
               <input
-                type="text"
+                type="password"
+                placeholder="************"
                 className="w-full h-[52px] bg-lightbg rounded-md pl-12 outline-none pr-4 font-semibold"
               />
               <span className=" absolute top-1/2 right-5 translate-x-1/2 text-gray-400 -translate-y-3">
