@@ -5,6 +5,7 @@ import { CircleUserRound, Eye, EyeOff, LockKeyhole } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import msg from "@/public/icons/Message.svg";
 import lock from "@/public/icons/Lock.svg";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -26,7 +27,8 @@ const page = () => {
                 className=" absolute top-1/2 left-3 translate-x-0 text-gray-400 -translate-y-1/2"
               />
               <input
-                type="text"
+                placeholder="example@compay.com"
+                type="email"
                 className="w-full h-[52px] bg-lightbg rounded-md pl-12 outline-none pr-4 font-semibold"
               />
             </div>
@@ -37,7 +39,8 @@ const page = () => {
                 className=" absolute top-1/2 left-3 translate-x-0 text-gray-400 -translate-y-1/2"
               />
               <input
-                type="text"
+                type="password"
+                placeholder="************"
                 className="w-full h-[52px] bg-lightbg rounded-md pl-12 outline-none pr-4 font-semibold"
               />
               <span className=" absolute top-1/2 right-5 translate-x-1/2 text-gray-400 -translate-y-3">
@@ -48,9 +51,9 @@ const page = () => {
             <div className="py-4 text-center">
               <p>
                 Vous n’avez jamais été en contact avec nous<br></br>
-                <span className="text-primary font-semibold">
+                <Link href="/login" className="text-primary font-semibold">
                   Contactez-nous
-                </span>
+                </Link>
               </p>
             </div>
           </div>
